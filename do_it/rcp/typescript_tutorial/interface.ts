@@ -37,19 +37,34 @@ interface Car {
   start(): void;
 }
 
-class BMW implements Car {
-  color;
-  dateOfPurchase;
+// class Bmw implements Car {
+//   color;
+//   dateOfPurchase;
 
-  constructor(color: string, dateOfPurchase: number) {
-    this.color = color;
-    this.dateOfPurchase = dateOfPurchase;
-  }
+//   constructor(color: string, dateOfPurchase: number) {
+//     this.color = color;
+//     this.dateOfPurchase = dateOfPurchase;
+//   }
 
-  start() {
-    console.log(`${this.color}색 BMW 자동차가 출발합니다.`);
-  }
+//   start() {
+//     console.log(`${this.color}색 BMW 자동차가 출발합니다.`);
+//   }
+// }
+
+// const myBmw = new Bmw("blue", 20230101);
+// myBmw.start();
+
+interface SportCar extends Car {
+  zero100: number;
 }
 
-const myBmw = new BMW("blue", 20230101);
-myBmw.start();
+const Benz: SportCar = {
+  color: "black",
+  dateOfPurchase: 20220101,
+  zero100: 3.3,
+  start() {
+    console.log(`${this.color}색 벤츠가 출발합니다`);
+  },
+};
+
+Benz.start()
