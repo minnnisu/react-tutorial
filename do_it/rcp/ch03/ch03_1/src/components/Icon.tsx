@@ -15,7 +15,7 @@ export const Icon: FC<IconProps> = ({
   ...props
 }) => {
   return (
-    <span {...props} className={["material-icons", _className].join(" ")}>
+    <span {...props} className={["material-icons", "_className"].join(" ")}>
       {name}
     </span>
   );
